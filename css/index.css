@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+nav {
+  background: linear-gradient(rgba(0, 60, 30, 1), rgba(0, 70, 0, 0.8)),
+    url("https://images.pexels.com/photos/8975687/pexels-photo-8975687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  padding: 10px 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d0e0b7;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: left;
+  padding: 1em 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.masthead {
+  background: linear-gradient(rgba(0, 60, 30, 0.6), rgba(0, 70, 0, 0.3)),
+    url("https://images.pexels.com/photos/8975687/pexels-photo-8975687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cfe0b5;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.masthead h1 {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  margin: 2em;
+  text-align: center;
+}
+
+button {
+  margin: 1em auto;
+  color: #47710d;
+  padding: 0.2em 1em;
+  border: 1px solid #548d04;
+  border-radius: 0.3em;
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+button.active {
+  background-color: #548d04;
+  color: white;
+}
+
+main {
+  margin: 2em;
+}
+
+#controls {
+  display: flex;
+  gap: 1em;
+  margin: auto;
+}
+
+#dynamic-content h2 {
+  grid-area: title;
+  font-family: "Merriweather", serif;
+  color: #3e5c15;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+#dynamic-content img {
+  grid-area: image;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0.5em;
+}
+
+#dynamic-content p {
+  font-family: lato;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 60, 30, 0.6), rgba(0, 70, 0, 0.3)),
+    url("https://images.pexels.com/photos/8975687/pexels-photo-8975687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10vh;
+  padding: 10px 0;
+}
+
+i {
+  font-size: 1.8rem;
+  color: #ffffff;
+  padding: 0 1em;
+}
+
+/* *********Desktop view*********** */
+@media only screen and (min-width: 30rem) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    padding: 0;
+    margin: 0 15px;
+    border: none;
+  }
+
+  nav a {
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+
+  .masthead h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+  }
+
+  main {
+    margin: 2em;
+    box-sizing: border-box;
+  }
+
+  button {
+    color: #47710d;
+    padding: 0.5em 2em;
+    border: 1px solid #548d04;
+    border-radius: 0.3em;
+    font-size: 1em;
+  }
+
+  #controls {
+    max-width: 60rem;
+    margin: 1em auto;
+  }
+
+  #dynamic-content {
+    margin: auto;
+    max-width: 60rem;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "image text";
+    gap: 1.5em;
+
+  }
+
+  #dynamic-content h2 {
+    grid-area: title;
+    font-family: "Merriweather", serif;
+    color: #3e5c15;
+    font-size: 1.5rem;
+
+  }
+
+  #dynamic-content img {
+    grid-area: image;
+    width: 100%;
+    border-radius: 0.5em;
+  }
+
+  #dynamic-content p {
+    grid-area: text;
+    margin: 0;
+
+
+  }
+}
